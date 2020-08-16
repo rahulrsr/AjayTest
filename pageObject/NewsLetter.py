@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 class NewsLetter:
     letter_input_field=(By.XPATH,"//input[@id='newsletter-input']")
     submit_btn=(By.XPATH,"//button[@name='submitNewsletter']")
-    alert_box = (By.XPATH, "//p[@class='alert alert-danger']")
-
+    alert_box_existing_msg = (By.XPATH, "//p[@class='alert alert-danger']")
+    alert_box_success_msg = (By.XPATH, "//p[@class='alert alert-success']")
     def __init__(self,driver):
         self.driver=driver
 
@@ -14,5 +14,7 @@ class NewsLetter:
     def submit_btn_fun(self):
         return self.driver.find_element(*NewsLetter.submit_btn)
 
-    def alert_box_fun(self):
-        return self.driver.find_element(*NewsLetter.alert_box)
+    def alert_box_existing_msg_fun(self):
+        return self.driver.find_element(*NewsLetter.alert_box_existing_msg)
+    def alert_box_success_msg_fun(self):
+        return self.driver.find_element(*NewsLetter.alert_box_success_msg)
