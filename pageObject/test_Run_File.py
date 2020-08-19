@@ -4,10 +4,10 @@ from selenium import webdriver
 #from selenium.webdriver impor
 import time
 
-class test():
-    def __init__(self):
-        self.driver = webdriver.Chrome()
-        self.driver.implicitly_wait(5)
+class TestRun:
+    # def __init__(self):
+    #     self.driver = webdriver.Chrome()
+    #     self.driver.implicitly_wait(5)
 
 
     def test_run(self):
@@ -37,8 +37,8 @@ class test():
 
 
 if __name__ == '__main__':
-    t=test()
-    t.test_run()
+    t=testRun()
+    t.testRun()
     t.test_success_message()
 
 
